@@ -37,6 +37,10 @@ ln -s `which echo` /usr/local/bin/whiptail
 curl -L -s "$(s6_download_url)" | tar xvzf - -C /
 mv /init /s6-init
 
+# Install unbound
+apt update
+apt install -y unbound
+
 # Preseed variables to assist with using --unattended install
 {
   echo "PIHOLE_INTERFACE=eth0"
