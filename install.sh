@@ -39,7 +39,7 @@ mv /init /s6-init
 
 # Install unbound
 apt update
-apt install unbound
+apt install -y unbound
 
 # Preseed variables to assist with using --unattended install
 {
